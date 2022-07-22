@@ -3,7 +3,12 @@ from django.shortcuts import render, HttpResponse
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    context={
+        "variable":"spime",
+        "variable1":"password manager"
+    }
+
+    return render(request, 'index.html',context)
     #return HttpResponse("This is Home page.")
 
 def about(request):
